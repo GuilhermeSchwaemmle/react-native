@@ -1,0 +1,31 @@
+//inicializa um repositorio local
+git init
+
+//cria um branch local
+git branch -M main
+
+//conecta um repositorio local a um remoto
+git remote add origin https://github.com/GuilhermeSchwaemmle/react-native.git
+
+//adiciona arquivos ao comit
+git add <arquivos>
+
+//efetua o commit no repositorio local
+git commit -m "first commit"
+
+//transfere os arquivos comitados localmente para o remoto
+git push -u origin main
+
+//verifica qual repositorio remoto esta conectado
+git remote -v
+
+
+
+
+
+
+
+
+
+//verifica qual repositorio remoto esta conectado
+git remote -v
