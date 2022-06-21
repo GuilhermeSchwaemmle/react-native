@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="numero" />
+    <button onclick="calcularwhile()">Calcular usando while</button>
+    <button onclick="calcularfor()">Calcular usando for</button>
+    <label id="resultado"></label>
+
+    <script>
+        function calcularwhile(){
+          var numero = parseFloat(document.getElementById("numero").value)
+          var resultado = 0
+          while(numero > 0){              
+              resultado = resultado + numero
+              console.log(`Resultado: ${resultado} anterior? ${numero}`)
+              numero--
+          }
+          document.getElementById("resultado").innerHTML = resultado
+        }
+
+        function calcularfor(){
+          var numero = parseFloat(document.getElementById("numero").value)
+          var resultado = 0
+          
+          for(let i = 0; i <= numero; i++) {
+              resultado += i
+          }
+          
+          document.getElementById("resultado").innerHTML = resultado
+        }
+        
+    </script>
+</body>
+</html>

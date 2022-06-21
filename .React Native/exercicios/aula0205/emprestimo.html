@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercício empréstimo:</h1>
+    <hr>
+    <h3>Informe o valor do empréstimo:</h3>
+    <input id="valorEmp" type="number" /> <br> <br>
+
+    <h3>Informe a taxa de juros:</h3>
+    <input id="taxaJu" type="number" /> <br> <br>
+
+    <h3>Informe a quantidade de parcelas:</h3>
+    <input id="qtdParc" type="number" /> <br> <br>
+
+    <button style="background-color: mediumaquamarine;" onclick="calcular()">Calcular</button>
+    <hr>
+    <label id="juros"></label> <br>
+    <label id="valorParcela"></label>
+
+    <script>
+        function calcular() {
+            var valorEmp = parseFloat(document.getElementById("valorEmp").value)
+
+            var taxaJu = parseFloat(document.getElementById("taxaJu").value)
+            taxaJu = valorEmp * (taxaJu / 100)
+            var taxa = valorEmp * taxaJu
+            valorEmp += taxa
+
+            var qtdParc = parseFloat(document.getElementById("qtdParc").value)
+            qtdParc = valorEmp / qtdParc
+
+
+
+            document.getElementById("resultado").innerHTML = `O valor final é de R$${valorEmp}. Valor do juros R$${taxaJu}/mês. Valor de cada parcela R$${qtdParc.toFixed(2)}`
+        }
+    </script>
+
+</body>
+
+</html>

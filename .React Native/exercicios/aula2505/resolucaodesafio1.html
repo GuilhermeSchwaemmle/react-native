@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: auto;
+        }
+
+        input {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <label>Descrição</label>
+        <input type="text" id="descricao" placeholder="Informe descrição do produto">
+
+        <label>Preço</label>
+        <input type="text" id="preco" placeholder="Informe preço do produto">
+
+        <label>Estoque</label>
+        <input type="text" id="estoque" placeholder="Informe estoque do produto">
+
+        <div>
+            <button onclick="comoVisualizar()">Salvar</button>
+            <button onclick="limpar()">Limpar</button>
+            <input onchange="change()" type="checkbox" id="vertabela"> Visualizar em tabela? </input>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                </tr>
+            </thead>
+            <tbody id="dados">
+                <!-- Dados inseridos via função
+                <tr>
+                    <td>Feijão</td>    
+                    <td>7.89</td>    
+                    <td>10</td>    
+                </tr> -->
+
+            </tbody>
+        </table>
+        <div id="dadosparagrafo">
+
+        </div>
+    </div>
+
+    <script>
+
+        var produtos = []
+
+        function comoVisualizar() {
+            if (document.getElementById("vertabela").checked) {
+                add(showEmTabela)
+                document.getElementById("dadosparagrafo").style = "display: none"
+                document.getElementsByTagName("table")[0].style = "display: block"
+            }
+            else {
+                add(showEmParagrafo)
+                document.getElementById("dadosparagrafo").style = "display: block"
+                document.getElementsByTagName("table")[0].style = "display: none"
+            }
+        }
+
+        function change() {
+            if (document.getElementById("vertabela").checked) {
+                showEmTabela()
+                document.getElementById("dadosparagrafo").style = "display: none"
+                document.getElementsByTagName("table")[0].style = "display: block"
+            }
+            else {
+                showEmParagrafo()
+                document.getElementById("dadosparagrafo").style = "display: block"
+                document.getElementsByTagName("table")[0].style = "display: none"
+            }
+        }
+
+        function add(callback) {
+            //validar se dados foram inseridos
+
+            //atribui valores para o objeto
+            var obj = {
+                descricao: document.getElementById("descricao").value,
+                preco: document.getElementById("preco").value,
+                estoque: document.getElementById("estoque").value
+            }
+            //colocar objeto no array produtos
+            produtos.push(obj)
+            limpar()
+            callback()
+        }
+
+        function showEmTabela() {
+            let linhas = ""
+            for (let i = 0; i < produtos.length; i++) {
+                linhas +=
+                    `<tr><td>${produtos[i].descricao}</td>
+                    <td>${produtos[i].preco}</td>
+                    <td>${produtos[i].estoque}</td>
+                    </tr>`
+            }
+            document.getElementById("dados").innerHTML = linhas
+        }
+
+        function showEmParagrafo() {
+            let linha = ''
+            for (let i = 0; i < produtos.length; i++) {
+                linha += `<p>${produtos[i].descricao},   ${produtos[i].preco},  ${produtos[i].estoque}</p>`
+            }
+            document.getElementById("dadosparagrafo").innerHTML = linha
+        }
+
+        function limpar() {
+            document.getElementById("descricao").value = ""
+            document.getElementById("preco").value = ""
+            document.getElementById("estoque").value = ""
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Informe quantidade de pessoas</label> <br>
+    <input type="text" id="qtdpessoas" /> <br><br>
+
+    <label>Informe qual carne</label> <br>
+    <input type="text" id="descricaoItem" /> <br><br>
+
+    <label>Informe em gramas quanto cada pessoa consome</label> <br>
+    <input type="text" id="qtdgramas" /> <br><br>
+
+    <label>Informe preço</label> <br>
+    <input type="text" id="preco" /> <br><br>
+
+    <button onclick="calcular()">Calcular</button>
+    <hr>
+    <p id="resultado"></p>
+    <script>
+        function calcular() {
+            /*validar a entrada de dados*/
+            if(document.getElementById("qtdpessoas").value == ''){
+                alert("Informe a quantidade de pessoas")
+                document.getElementById("qtdpessoas").focus()
+                return
+            }
+
+            /*atribuir valor para as variaveis*/
+            var qtdpessoas = 0
+            qtdpessoas = document.getElementById("qtdpessoas").value
+
+            var qtdGramas = 0
+            qtdGramas = document.getElementById("qtdgramas").value
+            if(qtdGramas <= 0){
+                alert("Informe a quantidade consumida por pessoa")
+                document.getElementById("qtdgramas").focus
+                return
+            }
+
+            var quantidadeCarne = (qtdpessoas * qtdGramas)
+
+            /*pegar o preço digitado*/
+            var preco = document.getElementById("preco").value
+
+            /*calcular o valor e a quantidade a ser comprada*/
+            var qtdCompra = quantidadeCarne / 1000;
+            var total = qtdCompra * preco
+
+            /*verificar se numero de pessoas é maior que 10*/
+            if (qtdpessoas > 10) {
+                total += total * 0.10
+            }
+
+            document.getElementById("resultado").innerHTML = `Total R$${total.toFixed(2)} Quantidade carne: ${qtdCompra}Kg Valor por pessoa: R$${(total / qtdpessoas).toFixed(2)}`
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{
+    "venda": [
+        {
+            "cliente": {
+                "id": 1,
+                "nome": "José da Silva",
+                "email": "jose@gmail.com",
+                "fone": "1234-5678"
+            },
+            "produtos": [
+                {
+                    "id": 1,
+                    "Descrição": "Feijão",
+                    "Preço": "7,89",
+                    "Quantidade": "5"
+                },
+                {
+                    "id": 2,
+                    "Descrição": "Arroz",
+                    "Preço": "9,99",
+                    "Quantidade": "6"
+                },
+                {
+                    "id": 3,
+                    "Descrição": "Macarrão",
+                    "Preço": "2,99",
+                    "Quantidade": "4"
+                }
+            ]
+        }
+    ]
+}

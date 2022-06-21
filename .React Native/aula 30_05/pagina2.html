@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="mostrarFrutas()">Gravar</button>
+    <ol id="frutas"></ol>
+
+    <script>
+
+        function mostrarFrutas() {
+            let array = localStorage.getItem('frutas') != null ? localStorage.getItem('frutas').split(',') : []
+            var linhas = ""
+            for (let i = 0; i < array.length; i++) {
+                linhas += `<li>${array[i]}</li>`
+
+            }
+            document.getElementById("frutas").innerHTML = linhas
+
+        }
+
+
+    </script>
+</body>
+
+</html>

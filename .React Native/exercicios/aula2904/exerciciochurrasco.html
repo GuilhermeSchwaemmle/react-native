@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercício Churrasco:</h1>
+    <hr>
+    <h3>Quantidade de pessoas:</h3>
+    <input id="qntdPessoas" type="number" /> <br>
+
+    <h3>Gramas de carne por pessoa:</h3>
+    <input id="gramas" type="number" /> <br>
+
+    <h3>Tipo de carne:</h3>
+    <select>
+        <option></option>
+        <option>Alcatra</option>
+        <option>Picanha</option>
+        <option>Maminha</option>
+    </select>
+
+    <h3>Tabela de preços:</h3>
+    <table width="20%" border="1px">
+        <thead>
+            <tr>
+                <th width="30">Descrição</th>
+                <th width="30">Kg</th>
+                <th width="30">Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td width="30">Alcatra</td>
+                <td width="30">1</td>
+                <td width="30">R$48,90</td>
+            </tr>
+            <tr>
+                <td width="30">Picanha</td>
+                <td width="30">1</td>
+                <td width="30">R$57,90</td>
+            </tr>
+            <tr>
+                <td width="30">Maminha</td>
+                <td width="30">1</td>
+                <td width="30">R$43,90</td>
+            </tr>
+        </tbody>
+    </table> <br>
+
+    <button style="background-color:peachpuff;border-color:goldenrod;" onclick="calcular()">Calcular total</button>
+
+    <hr> <br>
+    <p id="total"></p>
+
+    <script>
+        function calcular() {
+            var preçoAl = document.getElementById("preçoAl").value
+            var preçoPi = document.getElementById("preçoPi").value
+            var preçoMa = document.getElementById("preçoMa").value
+            var qntdPessoas = document.getElementById("qntdPessoas").value
+            var gramas = document.getElementById("gramas").value
+
+            var preçoAl = 48.90 / 1000 * gramas * qntdPessoas
+            var preçoPi = 57.90 / 1000 * gramas * qntdPessoas
+            var preçoMa = 43.90 / 1000 * gramas * qntdPessoas
+
+            document.getElementById("total").innerHTML = `A quantidade de carne a ser comprada é ${gramas}`
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Produtos</title>
+
+</head>
+
+<body onload="load()">
+
+    <header>
+        <h1>Consultar Produtos</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>ID</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </main>
+
+
+
+    <script>
+        function load() {
+            fetch("http://localhost:3000/produtos")
+                .then(x => x.json())
+                .then(y => {
+                    let tabela = document.getElementsByTagName('tbody')[0]
+                    tabela.innerHTML = ""
+                    y.forEach(dado => {
+                        let item = display(dado)
+                        tabela.innerHTML += item
+                    })
+                })
+                .catch(e => console.log(`error: ${e}`))
+        }
+
+        function display(obj) {
+            let linha = "<tr>"
+            for (let prop in obj) {
+                linha += `<td>${obj[prop]}</td>`
+                if(prop == "id"){
+                    let id = obj["id"]
+                    linha += `<td><button onclick="excluir(${id})">Excluir</button></td>`
+                    linha += `<td><button onclick="editar(${id})">Editar</button></td>`
+                }
+            }
+            linha += "</tr>"
+
+            return linha
+        }
+
+        function excluir(id){
+            fetch(`http://localhost:3000/produtos/${id}`, { method: 'DELETE' })
+                .then(data => data.json())
+                .then(cli => alert('Produto excluído com sucesso'))
+        }
+
+    </script>
+</body>
+
+</html>

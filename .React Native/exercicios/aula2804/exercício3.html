@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercício 3:</h1>
+    <hr><br>
+    <input id="nome" type="text" placeholder="Informe seu nome" /> <br> <br>
+    <input id="sobrenome" type="text" placeholder="Informe seu sobrenome" /> <br> <br>
+
+    <h3>Nota 1:</h3>
+    <input id="n1" type="number" placeholder="Informe a nota 1" /> <br>
+
+    <h3>Nota 2:</h3>
+    <input id="n2" type="number" placeholder="Informe a nota 2" /> <br>
+
+    <h3>Nota 3:</h3>
+    <input id="n3" type="number" placeholder="Informe a nota 3" /> <br> <br>
+
+    <button onclick="calcular()">Calcular média</button>
+
+    <hr>
+    <p id="media"></p>
+
+    <script>
+        function calcular() {
+            var nome = document.getElementById("nome").value
+            if (nome == '') {
+                alert("Informe um nome")
+                document.getElementById("nome").focus()
+            }
+            var sobrenome = document.getElementById("sobrenome").value
+            if (sobrenome == '') {
+                alert("Informe um sobrenome")
+                document.getElementById("sobrenome").focus()
+            }
+            var n1 = document.getElementById("n1").value
+            if (n1 == '') {
+                alert("Informe a nota 1")
+                document.getElementById("n1").focus()
+                return
+            }
+            else {
+                n1 = parseFloat(n1)
+            }
+            if (n1 > 10) {
+                alert("Use apenas números menores que 10")
+                document.getElementById("n1").focus()
+            }
+            else if (n1 < 0) {
+                alert("Use apenas números maiores que 0")
+                document.getElementById("n1").focus()
+                return
+            }
+
+            var n2 = document.getElementById("n2").value
+            if (n2 == '') {
+                alert("Informe a nota 2")
+                document.getElementById("n2").focus()
+                return
+            }
+            else {
+                n2 = parseFloat(n2)
+            }
+            if (n2 > 10) {
+                alert("Use apenas números menores que 10")
+                document.getElementById("n2").focus()
+            }
+            else if (n2 < 0) {
+                alert("Use apenas números maiores que 0")
+                document.getElementById("n2").focus()
+                return
+            }
+
+            var n3 = document.getElementById("n3").value
+            if (n3 == '') {
+                alert("Informe a nota 3")
+                document.getElementById("n3").focus()
+                return
+            }
+            else {
+                n3 = parseFloat(n3)
+            }
+            if (n3 > 10) {
+                alert("Use apenas números menores que 10")
+                document.getElementById("n3").focus()
+            }
+            else if (n3 < 0) {
+                alert("Use apenas números maiores que 0")
+                document.getElementById("n3").focus()
+                return
+            }
+
+
+            media = (n1 + n2 + n3) / 3
+            var situacao = "aprovado"
+            if (media < 7) {
+                situacao = "reprovado"
+            }
+
+            document.getElementById("media").innerHTML = (`${nome} ${sobrenome}, sua média é ${media}. Você está ${situacao}.`)
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

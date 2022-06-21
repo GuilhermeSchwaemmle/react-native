@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 1</title>
+    <style>
+        iframe {
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="cadastro.html" target="centro">Cadastro</a>
+    <a href="consulta.html" target="centro">Consulta</a>
+    <button id="bt">Login</button>
+    <label id="userconectado"></label>
+    <iframe src="login.html" frameborder="0" name="centro"></iframe>
+
+    <script>
+        if(localStorage.getItem("usuarioLogado") != null){
+            document.getElementById("userconectado").innerHTML = localStorage.getItem("usuarioLogado")
+
+            document.getElementById("bt").innerHTML = "Logout"
+            document.getElementById("bt").addEventListener("click", logout)
+            showItensLogado("block")
+        }
+        else{
+            showItensLogado("none")
+            document.getElementById("bt").addEventListener("click", login)
+        }
+
+        function login(){
+            document.getElementsByTagName("iframe")[0].src = 'login.html'
+            // parent.location.href = "login.html"
+        }
+
+        function logout(){
+            localStorage.removeItem("usuarioLogado")
+            window.location.reload()
+        }
+
+        function showItensLogado(mostrar){
+            document.getElementsByTagName("a")[0].style = `display: ${mostrar}`
+            document.getElementsByTagName("a")[1].style = `display: ${mostrar}`
+        }
+
+    </script>
+</body>
+
+</html>

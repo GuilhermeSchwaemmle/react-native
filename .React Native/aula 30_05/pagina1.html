@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <label>frutas</label>
+        <input type="text" id="frutas" placeholder="Informe uma fruta">
+        <button onclick="add(frutas)">Gravar</button>
+        <button onclick="limpar()">limpar</button>
+    </div>
+    <script>
+
+
+        function add(fruta) {
+
+            let frutas = localStorage.getItem('frutas') != null ? localStorage.getItem('frutas').split(',') : []
+            frutas.push(fruta.value)
+            localStorage.setItem("frutas", frutas)
+        }
+
+        function limpar() {
+            localStorage.removeItem("frutas")
+        }
+
+    </script>
+
+</body>
+
+</html>
