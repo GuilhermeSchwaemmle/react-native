@@ -29,9 +29,9 @@ class Produto {
     }
 
     precoAcre(): void{
-        var desconto: number = this.valoru * (this.desconto / 100)
-        desconto = this.valoru + desconto
-        console.log(desconto.toFixed(2));
+        var acrescimo: number = this.valoru * (this.acrescimo / 100)
+        acrescimo = this.valoru + acrescimo
+        console.log(acrescimo.toFixed(2));
     }
 
 }
