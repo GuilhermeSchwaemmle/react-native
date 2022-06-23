@@ -23,7 +23,6 @@ class Employe {
 
 let emp1: Employe
 emp1 = new Employe(10, 'jose da silva', '123')
-
 // emp1.empCode = 10
 // emp1.empName = 'jose da silva'
 // emp1.setMatricula('12345')
