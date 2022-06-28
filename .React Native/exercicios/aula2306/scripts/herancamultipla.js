@@ -3,6 +3,10 @@ class Bicho {
     constructor() {
         this.raca = '';
         this.especie = '';
+        this.quantidadeMamas = 10;
+    }
+    getQtdLeite() {
+        return 10;
     }
     barulho(x) {
         console.log(`Barulho de ${x}`);

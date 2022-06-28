@@ -4,9 +4,19 @@ interface IAnimal {
     barulho(x: string): void
 }
 
-class Bicho implements IAnimal{
+interface IMamifero {
+    quantidadeMamas: number
+    getQtdLeite(): number
+}
+
+class Bicho implements IAnimal, IMamifero {
     raca: string = ''
     especie: string = ''
+    quantidadeMamas: number = 10
+
+    getQtdLeite(): number {
+        return 10
+    }
 
     barulho(x: string): void {
         console.log(`Barulho de ${x}`)
