@@ -1,8 +1,8 @@
 "use strict";
 class Bicho {
     constructor() {
-        this.raca = '';
-        this.especie = '';
+        this.raca = 'Piatã';
+        this.especie = 'Suína';
         this.quantidadeMamas = 10;
     }
     getQtdLeite() {
@@ -11,7 +11,13 @@ class Bicho {
     barulho(x) {
         console.log(`Barulho de ${x}`);
     }
+    display() {
+        console.log(`Raça: ${this.raca}`);
+        console.log(`Espécie: ${this.especie}`);
+        console.log(`N° de mamas: ${this.quantidadeMamas}`);
+    }
 }
 let bicho;
 bicho = new Bicho;
 bicho.barulho('pocotó pocotó');
+bicho.display();

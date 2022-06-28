@@ -10,8 +10,8 @@ interface IMamifero {
 }
 
 class Bicho implements IAnimal, IMamifero {
-    raca: string = ''
-    especie: string = ''
+    raca: string = 'Piatã'
+    especie: string = 'Suína'
     quantidadeMamas: number = 10
 
     getQtdLeite(): number {
@@ -21,8 +21,16 @@ class Bicho implements IAnimal, IMamifero {
     barulho(x: string): void {
         console.log(`Barulho de ${x}`)
     }
+
+    display(){
+        console.log(`Raça: ${this.raca}`);
+        console.log(`Espécie: ${this.especie}`);
+        console.log(`N° de mamas: ${this.quantidadeMamas}`);
+        
+    }
 }
 
 let bicho: Bicho
 bicho = new Bicho
 bicho.barulho('pocotó pocotó')
+bicho.display()
