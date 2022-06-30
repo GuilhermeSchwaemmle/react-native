@@ -13,3 +13,11 @@ console.log(numeros);
 let frutas = dados<string>('laranja', 'banana')
 frutas.push('maçã')
 console.log(frutas);
+
+function base<X, U>(n1: X, n2: U){
+    console.log(`${n1}, ${n2}`);
+}
+
+let boletim = base<string, number>('jose',7)
+let func1 = base<string, boolean>('joao', true)
+let func2 = base<string, boolean>('pedro', false)

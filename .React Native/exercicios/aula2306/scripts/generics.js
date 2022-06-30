@@ -11,3 +11,9 @@ console.log(numeros);
 let frutas = dados('laranja', 'banana');
 frutas.push('maçã');
 console.log(frutas);
+function base(n1, n2) {
+    console.log(`${n1}, ${n2}`);
+}
+let boletim = base('jose', 7);
+let func1 = base('joao', true);
+let func2 = base('pedro', false);
