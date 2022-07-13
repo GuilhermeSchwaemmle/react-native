@@ -1,0 +1,48 @@
+dado é diferente de informação;
+
+dado é aquilo que é armazenado, informação é o que retorna;
+
+dado é uma informação bruta, informação é um dado detalhado;
+
+MySQL, SQL Server, Oracle, Mongo são gerenciadores de banco de dados, todos suportam um volume de dados diferentes;
+
+SQL (Structured Query Language) é uma linguagem de programação;
+	-DDL
+		-Create, drop, alter
+
+	-DML
+		-insert, update, delete, select
+
+SGBD (sistema gerenciador de banco de dados) é um software que permite a criação de banco de dados;
+
+sem o SGBD a linguagem fica em memória, ou seja, se desligar a máquina, perde-se o código;
+
+>tabela:
+	estrutura na qual os dados são organizados para armazenamento;
+>coluna:
+	uma unidade que armazena um dado;
+>tupla:
+	um registro, uma linha inserida na tabela;
+
+>relacionamento:
+	registros podem se relacionar com registros de outras tabelas (relacionamento somente com duas 	tabelas, nunca forma-se um triangulo);
+>cardinalidade:
+	define a intensidade do relacionamento entre registros. por exemplo, uma categoria tem vários 	produtos, porém um produto só tem uma categoria;
+
+>chave primária:
+	identificador único de um registro;
+>chave estrangeira:
+	representa um relacionamento; armazena o valor da chave primária do registro relacionado;
+
+>Modelos:
+	-modelo conceitual:
+		-visão das entidades/tabelas e seus atributos;
+	-modelo lógico:
+		-identifica chave primária e chave estrangeira:
+	-modelo físico:
+		-scripts DDL (data definition language);
+
+
+
+
+
