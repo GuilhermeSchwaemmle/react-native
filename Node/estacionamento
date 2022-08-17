@@ -1,0 +1,14 @@
+create table cliente(
+id serial primary key,nome varchar (50));
+
+insert into cliente(nome)
+values ('josé');
+
+insert into cliente(nome)
+values ('joao');
+
+insert into cliente(nome)
+values ('josimar');
+
+select * from cliente
+

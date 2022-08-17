@@ -1,0 +1,7 @@
+-- insert into tb_profile(gender, photo)values('Femenino', 'foto3.jpg')
+
+-- select * from tb_profile
+
+insert into public.tb_user(nome, email, idade, profile)values('Ana', 'ana@gmail.com', '25', 3)
+
+--select * from tb_user

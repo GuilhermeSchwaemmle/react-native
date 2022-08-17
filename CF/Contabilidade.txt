@@ -1,0 +1,48 @@
+história
+
+-A origem da Contabilidade está ligada a necessidade de regitros;
+
+-As primeiras escritas contábeis datam do término da era da pedra polida, quando o homem registrava os seus primeiros desenhos e gravações;
+
+-Há interessantes relatos bíblicos sobre controles contábeis;
+
+-O aparecimento da obra de frei luca pacioli, comtemporaneo de leonardo da vinci, que viveu na toscana, no seculo XV, marca o inicio da fase moderna da contabilidade;
+
+-frei luca pacioli, escreveu a obra "tratactus de computis et scriptus" (contabilidade por partidas dobradas), publicado em 1494, enfatizando qua a teoria contabil do debito e do credito
+corresponde a teoria dos numeros positivos e negativos.
+
+pessoal = 1° pessoa (sócios/pessoas a quem a segunda pessoa presta contas) 
+
+empresarial = 2° pessoa (empresas que prestam contas a quem investe na tal)
+
+A indexação, em economia, é um sistema de reajuste de preços, inclusive salários e aluguéis, de acordo com índices oficiais de variação dos preços. Em conjunturas inflacionárias, a indexação permite corrigir o valor real dos salários e aluguéis e demais preços da economia, reajustando-os com base na inflação passada.
+
+IPCA é o indexador que converte o valor bruto em real
+
+a ferramenta utilizada para controlar o capital de giro é o fluxo de caixa.
+
+Balanço Patrimonial é um relatório que demonstra de maneira clara e precisa a situação financeira de uma empresa. Para isso, são considerados todos os ativos e passivos de um negócio, ou seja, seus bens, dívidas e lucros.
+
+-valor nominal tambem é conhecido por valor bruto
+-valor real tambem é conhecido por valor liquido
+
+
++ 200.000 casa financiada
++ 25.000 carro
++ 10.000 divida a receber
+- 60.000 financiamento da casa
+
++ 175.000
+
+ativos = bens + direitos
+passivos = obrigações
+
+patrimonio liquido = ativos - passivos (bens + direitos - obrigações)
+
+o total dos ativos sempre sera igual a soma dos passivos e do patrimonio liquido. (diferença zero)
+
+DRE = medição da capacidade de geração/giração de caixa
+
+No Regime de Competência, a empresa oferece à tributação o faturamento do período independente de ter recebido do cliente.
+
+No Regime Caixa, a empresa tributa apenas o valor recebido. Exemplo: Se efetuou uma venda em 30, 60 e 90 dias, ela oferecerá à tributação em cada mês o valor recebido.
